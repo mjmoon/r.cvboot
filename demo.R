@@ -8,8 +8,10 @@ pop <- get2dpop()
 space <- get2dspace(res = 0.03)
 
 # plot population space and sample
-plot2d(pop, alpha = 0.1, title = "Popultion Space")
-plot2d(sam, alpha = 1, title = "Sample Data")
+plot2d(pop, alpha = 0.1, title = "Popultion Space",
+       ylim = c(-3,3), xlim = c(-3,3))
+plot2d(sam, alpha = 1, title = "Sample Data",
+       ylim = c(-3,3), xlim = c(-3,3))
 
 # lda-CV
 plotfit(sam, space, title = "LDA Fit on Sample Data")
